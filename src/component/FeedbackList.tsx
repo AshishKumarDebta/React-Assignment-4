@@ -1,6 +1,4 @@
-export default FeedbackForm;
-
-import { Feedback } from "../actions/feedback";
+import { Feedback } from "../action/feedback";
 
 interface Props {
   feedback: Feedback[];

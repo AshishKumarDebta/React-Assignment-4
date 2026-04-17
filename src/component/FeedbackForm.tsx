@@ -1,4 +1,4 @@
-import { Feedback } from "../actions/feedback";
+import { Feedback } from "../action/feedback";
 
 interface Props {
   addFeedback: (data: Feedback) => void;
@@ -52,3 +52,4 @@ e.currentTarget.reset();
 </form>
   );
 }
+export default FeedbackForm;
