@@ -6,18 +6,22 @@ interface Props {
 
 function FeedbackList({ feedback }: Props) {
   return (
-    <div>
-      <h2>List</h2>
+    <div className="feedback-list">
+      <h2>Feedback List</h2>
 
-  {feedback.map((item, index) => (
-    <div className="feedback-card" key={index}>
-      <h4>{item.name}</h4>
-      <p>{item.message}</p>
-      <p className="rating">
-        Rating: {item.rating} 
-      </p>
+      {feedback.length === 0 && (
+        <p className="empty-message">No feedback available</p>
+      )}
+
+      {feedback.map((item) => (
+        <div className="feedback-card" key={item.id}>
+          <h4>{item.name}</h4>
+          <p>{item.message}</p>
+          <p className="rating">Rating: {item.rating}</p>
+        </div>
+      ))}
     </div>
-  ))}
-</div>
   );
 }
+
+export default FeedbackList;
