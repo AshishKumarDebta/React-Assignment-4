@@ -1,13 +1,15 @@
+"use client";
+
 import { useState } from "react";
-import FeedbackForm from "./component/FeedbackForm";
-import FeedbackList from "./component/FeedbackList";
-import { Feedback } from "./action/feedback";
+import FeedbackForm from "./components/FeedbackForm";
+import FeedbackList from "./components/FeedbackList";
+import { Feedback } from "./actions/feedback";
 import "./index.css";
 
 function App() {
   const [feedback, setFeedback] = useState<Feedback[]>([]);
 
-  const handleAddFeedback = (data: Feedback) => {
+  const addFeedback = (data: Feedback) => {
     setFeedback((prev) => [...prev, data]);
   };
 
@@ -15,7 +17,7 @@ function App() {
     <div className="app-container">
       <h1>Feedback System</h1>
 
-      <FeedbackForm addFeedback={handleAddFeedback} />
+      <FeedbackForm addFeedback={addFeedback} />
       <FeedbackList feedback={feedback} />
     </div>
   );

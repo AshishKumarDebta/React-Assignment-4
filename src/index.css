@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
+  background: linear-gradient(135deg, #eef2f7, #f8fafc);
 }
 
 .app-container {
@@ -13,17 +13,22 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  color: #333;
 }
 
+/* FORM */
+
 .feedback-form {
-  background: white;
+  background: #ffffff;
   padding: 25px;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .feedback-form h2 {
   margin-bottom: 15px;
+  color: #444;
 }
 
 .feedback-form label {
@@ -38,45 +43,66 @@ h1 {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid #ccc;
+  transition: border 0.2s;
 }
 
-.feedback-form textarea {
-  min-height: 80px;
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form select:focus {
+  border-color: #6200ee;
+  outline: none;
 }
+
+/* BUTTON */
 
 .feedback-form button {
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: none;
+  background-color: #6200ee;
+  color: white;
   cursor: pointer;
+  transition: background 0.3s;
 }
+
+.feedback-form button:hover {
+  background-color: #4b00c2;
+}
+
+/* LIST */
 
 .feedback-list {
   margin-top: 20px;
 }
 
 .feedback-card {
-  background: white;
+  background: #ffffff;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 15px;
+  border-left: 5px solid #6200ee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .feedback-card h4 {
   margin: 0 0 5px 0;
+  color: #222;
 }
 
 .feedback-card p {
   margin: 5px 0;
+  color: #555;
 }
 
 .rating {
   font-weight: bold;
+  color: #6200ee;
 }
 
 .empty-message {
   text-align: center;
   padding: 20px;
+  color: #777;
 }
